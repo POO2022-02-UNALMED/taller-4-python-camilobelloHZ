@@ -12,14 +12,14 @@ class Grupo:
         self._asignaturas = asignaturas
         self.listadoAlumnos = estudiantes
 
-
+    def __str__(self):
+        return "Grupo de estudiantes: grupo predeterminado"
     def listadoAsignaturas(self, **kwargs):
         if(self.asignatura is None):
             self._asignaturas= list()
         for x in kwargs.values():
             self._asignaturas.append(Asignatura(x))
-    def __str__(self):
-        return "Grupo de estudiantes: grupo predeterminado"
+
     
     def agregarAlumno(self, alumno, lista=list()):
         if(lista is None):
