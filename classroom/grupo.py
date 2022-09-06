@@ -21,11 +21,11 @@ class Grupo:
             self._asignaturas.append(Asignatura(x))
 
     
-    def agregarAlumno(self, alumno, lista=list()):
+    def agregarAlumno(self, alumno, lista=None):
         if(lista is None):
             lista= list()
         else:
-            self.listadoAlumnos = [alumno]
+            self.listadoAlumnos = list(alumno)
         lista.append(alumno)
         self.listadoAlumnos = lista
  
